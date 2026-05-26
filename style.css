@@ -252,7 +252,7 @@ hr {
 
     object-fit: cover;
 
-    object-position: center top;
+    object-position: center;
 
     border-radius: 28px;
 
@@ -1344,4 +1344,27 @@ hr {
     .photo-container { width: 320px; height: 440px; }
     .services-grid  { grid-template-columns: repeat(3, 1fr); }
     .aboutMe,.section-title{ text-align: center;}
+}
+
+@media (max-width: 768px){
+
+    .photo-container{
+
+        width: 250px;
+        height: 340px;
+        object-position: center;
+    }
+
+}
+
+
+@media (max-width: 480px){
+
+    .photo-container{
+
+        width: 220px;
+        height: 300px;
+        object-position: center;
+    }
+
 }
