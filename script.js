@@ -91,3 +91,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// SKILLS FILTER
+const filterButtons =
+document.querySelectorAll(".filter-btn");
+
+const skillCards =
+document.querySelectorAll(".service-card");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        filterButtons.forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        const filter =
+        button.getAttribute("data-filter");
+
+        skillCards.forEach(card => {
+
+            if(filter === "all"){
+
+                card.style.display = "block";
+
+            }else if(card.classList.contains(filter)){
+
+                card.style.display = "block";
+
+            }else{
+
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+
+});

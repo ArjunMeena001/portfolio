@@ -472,6 +472,10 @@ hr {
 }
 
 /* CONTAINER */
+
+
+
+
 .services-content {
     max-width: 1300px;
     margin: 0 auto;
@@ -482,6 +486,7 @@ hr {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
 }
+
 
 .service-card {
     background: rgba(255, 255, 255, 0.04);
@@ -611,6 +616,50 @@ hr {
     background: linear-gradient(90deg, #ff4d6d, #7a0c2e);
     margin-bottom: 20px;
     border-radius: 10px;
+}
+
+/* FILTER NAVBAR */
+.skills-filter{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 40px 0 60px;
+}
+
+.filter-btn{
+    padding: 12px 22px;
+    border-radius: 30px;
+    border: 1px solid rgba(255,80,120,0.25);
+    background: rgba(255,255,255,0.05);
+    color: #ff9db3;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 15px;
+}
+
+.filter-btn:hover{
+    background: #ff4d6d;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.filter-btn.active{
+    background: linear-gradient(135deg,#ff4d6d,#7a0c2e);
+    color: white;
+    box-shadow: 0 0 20px rgba(255,80,120,0.5);
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (max-width: 768px){
+
+    .services-grid{
+        grid-template-columns: 1fr;
+    }
+
 }
 
 
@@ -909,6 +958,57 @@ hr {
 /* Skills nav item update */
 .ul-list li a[href="#skills"] {
     color: #f5c7d3;
+}
+
+/* SEND MESSAGE BUTTON */
+
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 26px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255, 80, 120, 0.35);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(10px);
+
+    color: #ff9db3;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 0 12px rgba(255, 80, 120, 0.18);
+
+    text-decoration: none;
+}
+
+
+/* HOVER EFFECT */
+
+.btn:hover{
+
+    background: linear-gradient(
+        135deg,
+        #ff4d6d,
+        #7a0c2e
+    );
+
+    color: white;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 22px rgba(255, 80, 120, 0.45);
 }
 
 /* Responsive fixes */
